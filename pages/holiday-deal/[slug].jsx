@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import OverviewSection from "@/components/OverviewSection";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -17,6 +18,7 @@ function HolidayDeal() {
         )
         .then((res) => {
           console.log(res.data);
+          // console.log(res.data.dealDestinations.noOfNights);
           setDealInfo(res.data);
         })
         .catch((err) => console.error(err));
@@ -26,6 +28,10 @@ function HolidayDeal() {
     <>
       <div>
         <HeroSection data={dealInfo} />
+        <OverviewSection
+          overview={dealInfo?.overview?.content}
+          video={dealInfo?.secondaryVideoYoutubelink}
+        />
       </div>
     </>
   );
