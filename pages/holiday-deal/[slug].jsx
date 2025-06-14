@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import HighlightsSection from "@/components/HighlightSection";
 import OverviewSection from "@/components/OverviewSection";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -32,6 +33,7 @@ function HolidayDeal() {
           overview={dealInfo?.overview?.content}
           video={dealInfo?.secondaryVideoYoutubelink}
         />
+        <HighlightsSection highlight={dealInfo?.highlight} />
       </div>
     </>
   );
