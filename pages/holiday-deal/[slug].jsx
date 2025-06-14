@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import HighlightsSection from "@/components/HighlightSection";
+import HotelSection from "@/components/HotelSection";
 import ItinerarySection from "@/components/ItinerarySection";
 import OverviewSection from "@/components/OverviewSection";
 import axios from "axios";
@@ -36,6 +37,7 @@ function HolidayDeal() {
         />
         <HighlightsSection highlight={dealInfo?.highlight} />
         <ItinerarySection itineraries={dealInfo?.itineraries} />
+        <HotelSection hotels={dealInfo?.hotels} />
       </div>
     </>
   );
