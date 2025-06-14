@@ -1,3 +1,4 @@
+import DestinationSection from "@/components/DestinationSection";
 import HeroSection from "@/components/HeroSection";
 import HighlightsSection from "@/components/HighlightSection";
 import HotelSection from "@/components/HotelSection";
@@ -38,6 +39,7 @@ function HolidayDeal() {
         <HighlightsSection highlight={dealInfo?.highlight} />
         <ItinerarySection itineraries={dealInfo?.itineraries} />
         <HotelSection hotels={dealInfo?.hotels} />
+        <DestinationSection destinations={dealInfo?.dealDestinations} />
       </div>
     </>
   );
