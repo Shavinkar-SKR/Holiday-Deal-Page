@@ -4,7 +4,7 @@ function DestinationSection({ destinations }) {
   const [selectedDestination, setSelectedDestination] = useState(null);
 
   return (
-    <section className="px-6 py-12 bg-white rounded-3xl max-w-6xl mx-auto shadow-sm">
+    <section className="mt-6 px-6 py-12 bg-white rounded-3xl max-w-6xl mx-auto shadow-sm">
       <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-10">
         Destinations
       </h2>
