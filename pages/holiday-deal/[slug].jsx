@@ -1,5 +1,6 @@
 import DestinationSection from "@/components/DestinationSection";
 import ExcursionSection from "@/components/ExcursionSection";
+import FinePrintSection from "@/components/FinePrintSection";
 import HeroSection from "@/components/HeroSection";
 import HighlightsSection from "@/components/HighlightSection";
 import HotelSection from "@/components/HotelSection";
@@ -45,6 +46,7 @@ function HolidayDeal() {
           description={dealInfo?.excursions}
           image={dealInfo?.excursionImage}
         />
+        <FinePrintSection finePrint={dealInfo?.finePrint} />
       </div>
     </>
   );

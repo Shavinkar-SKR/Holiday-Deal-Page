@@ -7,7 +7,7 @@ function ExcursionSection({ description, image }) {
 
       <div className="grid gap-6">
         {image && (
-          <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 shadow hover:shadow-md transition">
+          <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 shadow-md">
             <img
               src={image.path}
               alt="Excursion"
