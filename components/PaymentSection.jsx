@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function PaymentSection({
   payment,
@@ -36,9 +37,11 @@ export default function PaymentSection({
       </h2>
 
       <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6 shadow-md">
-        <img
-          src={paymentImg?.path}
+        <Image
+          src={`/${paymentImg?.path}`}
           alt="Payment"
+          width={500}
+          height={500}
           className="w-full max-h-80 object-cover rounded-xl shadow mb-6"
         />
 

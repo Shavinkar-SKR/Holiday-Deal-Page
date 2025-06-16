@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 function DestinationSection({ destinations }) {
   const [selectedDestination, setSelectedDestination] = useState(null);
@@ -15,11 +16,14 @@ function DestinationSection({ destinations }) {
             key={index}
             className="bg-orange-50 p-5 rounded-2xl shadow hover:shadow-md transition"
           >
-            <img
+            <Image
               src={d.destination.image}
               alt={d.destination.name}
+              width={500}
+              height={500}
               className="w-full h-48 object-cover rounded-xl mb-3"
             />
+
             <h3 className="text-lg font-semibold text-gray-800">
               {d.destination.name}, {d.destination.country}
             </h3>
@@ -58,9 +62,11 @@ function DestinationSection({ destinations }) {
               ✕
             </button>
 
-            <img
-              src={selectedDestination.destination.image}
+            <Image
+              src={`/${selectedDestination.destination.image.path}`}
               alt={selectedDestination.destination.name}
+              width={500}
+              height={500}
               className="w-full h-56 object-cover rounded-xl mb-4"
             />
 

@@ -20,12 +20,35 @@ function HeroSection({ data }) {
           Save up to {saveUpto}%
         </p>
 
-        <div className="text-gray-700 text-base">
-          {dealDestinations &&
-            dealDestinations.map((d, index) => (
-              <p key={index}>{d.noOfNights} Nights</p>
+        <section className="px-6 py-12 bg-white rounded-3xl shadow-sm max-w-6xl mx-auto">
+          <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-8">
+            Deal Destinations
+          </h2>
+
+          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {dealDestinations?.map((d, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center text-center"
+              >
+                <img
+                  src={d.destination.image.path}
+                  alt={d.destination.title}
+                  className="w-full h-48 object-cover rounded-xl mb-4"
+                />
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">
+                  {d.destination.title}
+                </h3>
+                <p className="text-gray-600 mb-1">
+                  {d.destination.name}, {d.destination.country}
+                </p>
+                <p className="text-orange-600 font-medium">
+                  {d.noOfNights} Nights
+                </p>
+              </div>
             ))}
-        </div>
+          </div>
+        </section>
       </div>
     </div>
   );
