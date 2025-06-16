@@ -10,7 +10,7 @@ export default function PaymentSection({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const end = new Date("2025-06-17T12:00").getTime();
+      const end = new Date(dealExpirationDate).getTime();
       //console.log(end);
       const now = new Date().getTime();
       const diff = end - now;
