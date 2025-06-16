@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 function HeroSection({ data }) {
   if (!data) return null;
   const { title, price, farePrice, saveUpto, dealDestinations, heroImages } =

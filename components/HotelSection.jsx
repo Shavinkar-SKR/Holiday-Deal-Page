@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 
 function HotelSection({ hotels }) {
   const [selectedHotel, setSelectedHotel] = useState(null);
@@ -32,7 +31,7 @@ function HotelSection({ hotels }) {
             {hotel.images?.length ? (
               <div className="flex gap-2 mt-4 overflow-x-auto">
                 {hotel.images.map((img, unique) => (
-                  <Image
+                  <img
                     key={unique}
                     src={`/${img.path}`}
                     alt="Hotel"

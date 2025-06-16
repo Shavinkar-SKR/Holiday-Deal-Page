@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 function HighlightsSection({ highlight }) {
   if (!highlight) return null;
   return (
@@ -9,7 +7,7 @@ function HighlightsSection({ highlight }) {
       </h2>
 
       <div className="flex flex-col lg:flex-row gap-8 items-center">
-        <Image
+        <img
           src={`/${highlight.image}`}
           alt="Highlights"
           width={500}

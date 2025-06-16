@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 
 function DestinationSection({ destinations }) {
   const [selectedDestination, setSelectedDestination] = useState(null);
@@ -16,7 +15,7 @@ function DestinationSection({ destinations }) {
             key={index}
             className="bg-orange-50 p-5 rounded-2xl shadow hover:shadow-md transition"
           >
-            <Image
+            <img
               src={d.destination.image}
               alt={d.destination.name}
               width={500}
@@ -62,7 +61,7 @@ function DestinationSection({ destinations }) {
               ✕
             </button>
 
-            <Image
+            <img
               src={`/${selectedDestination.destination.image.path}`}
               alt={selectedDestination.destination.name}
               width={500}
