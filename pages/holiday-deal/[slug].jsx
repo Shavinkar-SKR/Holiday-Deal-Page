@@ -6,6 +6,7 @@ import HighlightsSection from "@/components/HighlightSection";
 import HotelSection from "@/components/HotelSection";
 import ItinerarySection from "@/components/ItinerarySection";
 import OverviewSection from "@/components/OverviewSection";
+import PaymentSection from "@/components/PaymentSection";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -47,6 +48,11 @@ function HolidayDeal() {
           image={dealInfo?.excursionImage}
         />
         <FinePrintSection finePrint={dealInfo?.finePrint} />
+        <PaymentSection
+          payment={dealInfo?.payment}
+          paymentImg={dealInfo?.paymentImage}
+          dealExpirationDate={dealInfo?.dealExpirationDate}
+        />
       </div>
     </>
   );
